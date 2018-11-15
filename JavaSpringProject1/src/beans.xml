@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+   
+
+<bean id="a1" class="com.slk.bean.Account">
+<property name="accNo" value="123"></property>
+<property name="balance" value="2000"></property>
+<property name="accHolder" value="smith"></property>
+</bean>
+
+<bean id="p1" class="com.slk.bean.Person">
+<property name="Name" value="smith"></property>
+<property name="age" value="30"></property>
+<property name="account" ref="a1"></property>
+</bean>
+
+<bean id="a2" class="com.slk.bean.Account">
+<property name="accNo" value="124"></property>
+<property name="balance" value="3000"></property>
+<property name="accHolder" value="kathy"></property>
+</bean>
+
+<bean id="p2" class="com.slk.bean.Person">
+<property name="Name" value="kathy"></property>
+<property name="age" value="26"></property>
+<property name="account" ref="a2"></property>
+</bean>
+
+</beans>
